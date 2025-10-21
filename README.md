@@ -2,7 +2,7 @@
 
 GRAFT (Graph-Aware Fusion Transformer) is a deep learning framework for cancer driver gene prediction that integrates multi-omics data and multiple biological networks.
 
-### 🔹 Key Features
+### Key Features
 Multi-view Graph Encoding: Learns network-specific embeddings from
 Protein–Protein Interaction Network (PPI)
 Gene Semantic Similarity Network (GO)
@@ -19,7 +19,7 @@ Graph Structural Encoding: Captures global importance (PageRank) and local neigh
 Graph-aware Transformer: Combines all features and incorporates an edge-attention bias in a Transformer encoder to model both local and global dependencies.
 
 
-### 📊 Model Framework
+### Model Framework
 <img width="5589" height="2715" alt="model_framework_figure2" src="https://github.com/user-attachments/assets/5daa1c4b-9fa1-4f3c-90fa-dd1999ce98b7" />
 
 
@@ -36,7 +36,7 @@ Graph-aware Transformer: Combines all features and incorporates an edge-attentio
 (D) Graph-aware Transformer for prediction
 
 
-### 📌 Summary
+### Summary
 GRAFT effectively integrates heterogeneous biological data and explicitly incorporates graph topology into the Transformer attention mechanism, achieving state-of-the-art performance in cancer driver gene prediction across multiple cancer types. Functional enrichment analysis of novel predictions further demonstrates its biological validity.
 
 ----
@@ -57,19 +57,19 @@ GRAFT effectively integrates heterogeneous biological data and explicitly incorp
 * pandas 1.3.5
 
 
-## 🚀 Implementation
+## Implementation
 
 To run GRAFT, specify:
 
 
 * PPI network source:
-- STRING (STRING v11)
-- CPDB (ConsensusPathDB)
+STRING (STRING v11)
+CPDB (ConsensusPathDB)
 
 
 * Cancer type:
-- pan-cancer
-- or a specific cancer type code (e.g., KIRC, BRCA, LUAD)
+pan-cancer
+or a specific cancer type code (e.g., KIRC, BRCA, LUAD)
 
 
 #### Example Usage
