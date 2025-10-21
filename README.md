@@ -62,22 +62,14 @@ GRAFT effectively integrates heterogeneous biological data and explicitly incorp
 To run GRAFT, specify:
 
 
-* PPI network source:
-
-  
-STRING (STRING v11)
-
-
-CPDB (ConsensusPathDB)
+PPI network source:
+* STRING (STRING v11)
+* CPDB (ConsensusPathDB)
 
 
-* Cancer type:
-
-  
-pan-cancer
-
-
-or a specific cancer type code (e.g., KIRC, BRCA, LUAD)
+Cancer type:
+* pan-cancer
+* or a specific cancer type code (e.g., KIRC, BRCA, LUAD)
 
 
 #### Example Usage
