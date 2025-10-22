@@ -62,50 +62,50 @@ Enrichment analysis is performed on a list of predicted driver genes.
 
 The raw data is processed through a series of scripts to generate the final data used for visualization and analysis.
 
-1.  **CTD Data Cleaning:** (`enrichment_analysis_1_CTD_file_preprocessing.py`, `enrichment_analysis_2_CTD_GO_KEGG_preprocessing.py`)
+1-1.  **CTD Data Cleaning:** (`enrichment_analysis_1_CTD_file_preprocessing.py`, `enrichment_analysis_2_CTD_GO_KEGG_preprocessing.py`)
     * These scripts process the raw TSV files from the `CTD_Association_data/` directory (e.g., `CTD_diseases.tsv`, `CTD_diseases_pathways.tsv`).
     * They extract essential columns and create cleaned, standardized TSV files. The outputs are stored in the `CTD_Association_data_preprocessed/` directory, which are then used by subsequent scripts.
 
-2.  **Enrichment Analysis:** (`enrichment_analysis_3_gprofiler.py` - *assuming script name*)
+1-2.  **Enrichment Analysis:** (`enrichment_analysis_3_gprofiler.py` - *assuming script name*)
     * Uses `predicted_top_genes.txt` as input for g:Profiler.
     * Performs enrichment analysis against GO and KEGG, saving the top 15 terms for each category (BP, CC, MF, KEGG) into `.csv` files in `enrichment_analysis_results/`.
 
-3.  **Cancer Term Filtering:** (`enrichment_analysis_4_extract_cancer_related_term.py`)
+1-3.  **Cancer Term Filtering:** (`enrichment_analysis_4_extract_cancer_related_term.py`)
     * Uses the cleaned CTD data and the enrichment `.csv` results.
     * Filters enrichment terms for cancer relevance using MeSH hierarchy and keyword matching.
     * **Outputs:** `cancer_related_terms_with_diseaseids.csv` (structured data) and `cancer_related_terms_with_diseaseids.txt` (human-readable version).
 
-4.  **Enrichment Results Visualization:** (`enrichment_analysis_5_visualize_enrichment_analysis_result.py`)
+1-4.  **Enrichment Results Visualization:** (`enrichment_analysis_5_visualize_enrichment_analysis_result.py`)
     * Reads the `top_15_*.csv` enrichment results and the `cancer_related_terms_with_diseaseids.txt` file.
     * Generates bar plots for each category, highlighting cancer-related terms in bold.
     * **Output:** Saves plots as `.png` files in `enrichment_final_results/`.
 
-5.  **Node Embedding Visualization (UMAP):** (`visualize_node_embedding.py`)
+2.  **Node Embedding Visualization (UMAP):** (`visualize_node_embedding.py`)
     * Takes the `node_embeddings.csv` file (containing embeddings for a single fold) as input.
     * Generates a 2D UMAP scatter plot, coloring points by their true label (Driver/Non-driver).
     * **Output:** `figures/umap_visualization.jpg`.
 
-6.  **Node Embedding Visualization (KDE):** (`visualize_node_embedding_all_pairwise_cosine_distance.py`)
+3.  **Node Embedding Visualization (KDE):** (`visualize_node_embedding_all_pairwise_cosine_distance.py`)
     * Also uses the `node_embeddings.csv` file.
     * Calculates and plots the Kernel Density Estimate (KDE) of pairwise cosine distances between embeddings within and between Driver/Non-driver groups.
     * **Output:** `figures/kde_distance_plot.jpg`.
   
-7.  **Potential Driver Gene Filtering:** (`filtering_ncg_potential_genes.py`)
+4-1.  **Potential Driver Gene Filtering:** (`filtering_ncg_potential_genes.py`)
     * Takes the NCG annotation file, known driver (`796true.txt`), and non-driver (`2187false.txt`) lists as input.
     * Filters the NCG list to identify genes not present in major cancer gene databases *and* not already labeled as known drivers or non-drivers.
     * **Output:** `node_prediction_pancancer/potential_driver_genes_ncg7.2.txt` - A list of potential novel driver candidates.
 
-8.  **Gene Category Prediction Score Visualization:** (`visualize_category_prediction_plot.py`)
+4-2.  **Gene Category Prediction Score Visualization:** (`visualize_category_prediction_plot.py`)
     * Reads per-fold prediction scores and uses the `796true.txt`, `2187false.txt`, and `potential_driver_genes_ncg7.2.txt` lists to categorize genes.
     * Generates a bar plot comparing the average prediction score for each gene category (Known Driver, Potential Driver, etc.) for both STRING and CPDB networks.
     * **Output:** `figures/predicted_gene_category.jpg`.
 
-9.  **Average Attention Weight Visualization:** (`visualize_average_attention_weight.py`)
+5.  **Average Attention Weight Visualization:** (`visualize_average_attention_weight.py`)
     * Takes the `attn_info.pt` file (containing attention weights for a single fold) as input.
     * Calculates the mean and standard deviation of attention weights for each network type (PPI, Pathway, GO) across all test set genes.
     * **Output:** A bar plot (`figures/avg_attention_weight.jpg`) visualizing these average weights.
 
-10. **Attention Weight Clustermap Visualization:** (`visualize_attention_clustermap.py`)
+6. **Attention Weight Clustermap Visualization:** (`visualize_attention_clustermap.py`)
     * Also uses the `attn_info.pt` file.
     * Generates a clustered heatmap (clustermap) of the standardized attention weights for a sample of individual genes.
     * Rows are colored by their true label (Driver/Non-driver) to visualize attention patterns.
