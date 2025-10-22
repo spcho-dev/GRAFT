@@ -1,6 +1,6 @@
 # Project Data and Preprocessing
 
-This document outlines the data sources and the preprocessing pipeline used in this project to generate the final datasets required for analysis and visualization.
+This document outlines the data sources and preprocessing pipeline required to reproduce the main experimental results and figures from our paper.
 
 ## Data Sources
 
