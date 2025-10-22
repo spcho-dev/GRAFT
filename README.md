@@ -57,7 +57,7 @@ To run GRAFT, specify:
 
 * **Cancer type:**
     * `pan-cancer`
-    * or a specific cancer type code (e.g., `BRCA`, `LUAD`, 'UCEC')
+    * or a specific cancer type code (e.g., `BRCA`, `LUAD`, `UCEC`)
 
 #### Example Usage
 ```bash
