@@ -9,7 +9,7 @@ import os
 
 # --- Configuration ---
 # Input data file containing attention info.
-data_file = "./node_prediction_pancancer/attn_info.pt"
+data_file = "./node_prediction/attn_info.pt"
 output_dir = "./figures"
 output_filename = os.path.join(output_dir, 'clustermap_attention.jpg')
 

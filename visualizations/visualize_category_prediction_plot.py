@@ -6,12 +6,12 @@ import numpy as np
 # --- Define file and directory paths ---
 output_dir = "./figures"
 network_dirs = {
-    'STRING': "./node_prediction_pancancer/prediction_genes_STRING",
-    'CPDB': "./node_prediction_pancancer/prediction_genes_CPDB"
+    'STRING': "./node_prediction/prediction_genes_STRING",
+    'CPDB': "./node_prediction/prediction_genes_CPDB"
 }
 driver_path = "../Data/796true.txt"
 nondriver_path = "../Data/2187false.txt"
-potential_path = "./node_prediction_pancancer/potential_driver_genes_ncg7.2.txt"
+potential_path = "./node_prediction/potential_driver_genes_ncg7.2.txt"
 
 # --- Load gene lists from text files ---
 try:
@@ -129,7 +129,7 @@ plt.tight_layout()
 
 # --- Save Figure ---
 os.makedirs(output_dir, exist_ok=True)
-output_filename = os.path.join(output_dir, 'predicted_gene_category.jpg')
+output_filename = os.path.join(output_dir, 'predicted_gene_category_test.jpg')
 plt.savefig(
     output_filename,
     format='jpg',

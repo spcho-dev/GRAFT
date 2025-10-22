@@ -7,9 +7,9 @@ from scipy.spatial.distance import pdist, cdist
 import os
 
 # --- Configuration ---
-data_file = "./node_prediction_pancancer/node_embeddings.csv"
+data_file = "./node_prediction/node_embeddings.csv"
 output_dir = "./figures"
-output_filename = os.path.join(output_dir, "kde_distance_plot.jpg")
+output_filename = os.path.join(output_dir, "kde_distance_plot_test.jpg")
 
 # --- Load Data ---
 try:
@@ -21,7 +21,7 @@ except FileNotFoundError:
 
 # --- Data Processing ---
 # Extract embedding columns (all columns except metadata)
-embedding_cols = [col for col in df.columns if col not in ['true_label', 'pred_prob', 'pred_label', 'fold', 'gene']]
+embedding_cols = [col for col in df.columns if col not in ['true_label', 'pred_prob', 'pred_label', 'gene']]
 # Standardize the embedding data
 embedding_data = StandardScaler().fit_transform(df[embedding_cols].values)
 
