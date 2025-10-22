@@ -88,4 +88,7 @@ Train and evaluate the GRAFT model for the specified cancer type.
 Output performance metrics and prediction scores.
 
 
+#### Figure and Analysis Reproduction
+The visualizations/ directory contains a collection of Python scripts and sample data to reproduce the main figures and supplementary analyses presented in our paper. This includes scripts for the hyperparameter sensitivity analysis, visualizations of the model's attention mechanism and node embeddings, and the full pipeline for the enrichment analysis.
 
+For detailed instructions on how to run each script and the required data, please refer to the README.md file located inside the visualizations/ directory
