@@ -36,7 +36,7 @@ To ensure reproducibility without requiring large downloads, all necessary prepr
 ### 3. Gene Lists (Used for Categorization and Filtering)
 
 * `./Data/796true.txt`: List of known driver genes.
-* `./Data/2187false.txt`: List of known non-driver genes.
+* `./Data/2187false.txt`: List of non-driver genes.
 
 ### 4. Gene Set Enrichment Analysis (g:Profiler)
 
@@ -48,7 +48,7 @@ Enrichment analysis is performed on a list of predicted driver genes.
 
 * **Tool:**
     * Analysis conducted using the **g:Profiler** Python library (`gprofiler-official`).
-    * **Sources queried:** Gene Ontology (GO:BP, GO:CC, GO:MF) and KEGG pathways.
+    * **Sources queried:** Gene Ontology (GO:BP - Biological Process, GO:CC - Cellular Component, GO:MF - Molecular Function) and KEGG pathways.
 
 ### 5. Derived Data for Analysis and Visualization
 
@@ -79,7 +79,7 @@ The raw data is processed through a series of scripts to generate the final data
         * These scripts process the raw TSV files from the `CTD_Association_data/` directory (e.g., `CTD_diseases.tsv`, `CTD_diseases_pathways.tsv`).
         * They extract essential columns and create cleaned, standardized TSV files. The outputs are stored in the `CTD_Association_data_preprocessed/` directory, which are then used by subsequent scripts.
 
-    * **Enrichment Analysis:** (`enrichment_analysis_3_gprofiler.py` - *assuming script name*)
+    * **Enrichment Analysis:** (`enrichment_analysis_3_gprofiler.py`)
        * Uses `predicted_top_genes.txt` as input for g:Profiler.
        * Performs enrichment analysis against GO and KEGG, saving the top 15 terms for each category (BP, CC, MF, KEGG) into `.csv` files in `enrichment_analysis_results/`.
 
