@@ -96,7 +96,7 @@ The raw data is processed through a series of scripts to generate the final data
 
 2.  **Node Embedding Visualization**
     * **UMAP Visualization:** (`visualize_node_embedding.py`)
-       * Takes the `node_embeddings.csv` file (containing embeddings for a single fold) as input.
+       * Takes the `node_embeddings.csv` file as input.
        * Generates a 2D UMAP scatter plot, coloring points by their true label (Driver/Non-driver).
        * **Output:** `figures/umap_visualization.jpg`.
          
@@ -112,13 +112,13 @@ The raw data is processed through a series of scripts to generate the final data
        * **Output:** `node_prediction_pancancer/potential_driver_genes_ncg7.2.txt` - A list of potential novel driver candidates.
          
     * **Gene Category Prediction Score Visualization:** (`visualize_category_prediction_plot.py`)
-       * Reads per-fold prediction scores and uses the `796true.txt`, `2187false.txt`, and `potential_driver_genes_ncg7.2.txt` lists to categorize genes.
+       * Reads prediction scores and uses the `796true.txt`, `2187false.txt`, and `potential_driver_genes_ncg7.2.txt` lists to categorize genes.
        * Generates a bar plot comparing the average prediction score for each gene category (Known Driver, Potential Driver, etc.) for both STRING and CPDB networks.
        * **Output:** `figures/predicted_gene_category.jpg`.
 
 4.  **Attention Mechanism Visualization**
     * **Average Attention Weight Visualization:** (`visualize_average_attention_weight.py`)
-       * Takes the `attn_info.pt` file (containing attention weights for a single fold) as input.
+       * Takes the `attn_info.pt` file as input.
        * Calculates the mean and standard deviation of attention weights for each network type (PPI, Pathway, GO) across all test set genes.
        * **Output:** A bar plot (`figures/avg_attention_weight.jpg`) visualizing these average weights.
          
