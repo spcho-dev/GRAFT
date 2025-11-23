@@ -33,7 +33,7 @@ To successfully run the reproduction scripts, please follow these steps regardin
 
 2. **Compressed Files:**  
    Some data files are provided in compressed formats (e.g., `.7z`, `.zip`) to save space.  
-   **You must extract these files into the same directory (`Data/`) before running any scripts.**
+   **You must extract these files into the same directory before running any scripts.**
 
 3. **Missing Large Files:**  
    Due to GitHub's file size limitations, **some large datasets (e.g., massive PPI networks, raw multi-omics matrices) could not be uploaded to this repository.**
