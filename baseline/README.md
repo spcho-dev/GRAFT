@@ -50,12 +50,12 @@ Below is the list of baseline models included in this comparison, along with the
 
 | Model | Reference | Official Repository |
 | :--- | :--- | :--- |
-| **MODIG** | Zhao, W., et al. (2022). MODIG: integrating multi-omics and multi-dimensional gene network... *Bioinformatics*, 38(21). | [Link](https://github.com/zjupgx/modig) |
+| **MODIG** | Zhao, W., et al. (2022). MODIG: integrating multi-omics and multi-dimensional gene network for cancer driver gene identification based on graph attention network model. *Bioinformatics*, 38(21). | [Link](https://github.com/zjupgx/modig) |
 | **EMGNN** | Chatzianastasis, M., et al. (2023). Explainable multilayer graph neural network for cancer gene prediction. *Bioinformatics*, 39(11). | [Link](https://github.com/zhanglab-aim/EMGNN) |
-| **GATOmics** | Kong, G., et al. (2025). GATOmics: A Novel Multi-Omics Graph Attention Network Model... *ICASSP 2025*. | [Link](https://github.com/ggkong/GATOmics) |
-| **ECD-CDGI** | Wang, T., et al. (2024). ECD-CDGI: An efficient energy-constrained diffusion model... *PLOS Computational Biology*, 20(8). | [Link](https://github.com/taowang11/ECD-CDGI) |
+| **GATOmics** | GATOmics: A Novel Multi-Omics Graph Attention Network Model for Cancer Driver Gene Detection. *ICASSP 2025*. | [Link](https://github.com/ggkong/GATOmics) |
+| **ECD-CDGI** | Wang, T., et al. (2024). ECD-CDGI: An efficient energy-constrained diffusion model for cancer driver gene identification. *PLOS Computational Biology*, 20(8). | [Link](https://github.com/taowang11/ECD-CDGI) |
 | **MNGCL** | Peng, W., et al. (2024). Multi-network graph contrastive learning for cancer driver gene identification. *IEEE TNSE*, 11(4). | [Link](https://github.com/weiba/MNGCL) |
-| **DISHyper** | Deng, C., et al. (2024). Identifying new cancer genes based on the integration of annotated gene sets... *Bioinformatics*, 40(Suppl 1). | [Link](https://github.com/genemine/DISHyper) |
-| **DISFusion** | Deng, C., et al. (2025). Improving Cancer Gene Prediction by Enhancing Common Information... *AAAI*, 39(1). | [Link](https://github.com/CharlesDeng0814/DISFusion) |
-| **TREE** | Su, X., et al. (2025). Interpretable identification of cancer genes across biological networks... *Nat Biomed Eng*, 9(3). | [Link](https://github.com/Blair1213/TREE) |
+| **DISHyper** | Deng, C., et al. (2024). Identifying new cancer genes based on the integration of annotated gene sets via hypergraph neural networks. *Bioinformatics*, 40(Suppl 1). | [Link](https://github.com/genemine/DISHyper) |
+| **DISFusion** | Deng, C., et al. (2025). Improving Cancer Gene Prediction by Enhancing Common Information Between the PPI Network and Gene Functional Association. *AAAI*, 39(1). | [Link](https://github.com/CharlesDeng0814/DISFusion) |
+| **TREE** | Su, X., et al. (2025). Interpretable identification of cancer genes across biological networks via transformer-powered graph representation learning. *Nat Biomed Eng*, 9(3). | [Link](https://github.com/Blair1213/TREE) |
 
