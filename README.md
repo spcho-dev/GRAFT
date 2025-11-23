@@ -80,3 +80,10 @@ The script will:
 The `visualizations/` directory contains a collection of Python scripts and sample data to reproduce the main figures and supplementary analyses presented in our paper. This includes scripts for the visualizations of the model's attention mechanism and node embeddings, and the full pipeline for the enrichment analysis.
 
 For detailed instructions on how to run each script and the required data, please refer to the `README.md` file located inside the `visualizations/` directory.
+
+
+#### Baseline Model Reproduction
+
+The `baseline/` directory contains a collection of reproduction scripts and pre-trained model weights to evaluate the baseline models compared in our study. This includes Jupyter notebooks (`.ipynb`) designed to load the provided checkpoints (`.pt` or `.h5`) and perform inference step-by-step for models such as MNGCL, ECD-CDGI, DISHyper, DISFusion, GATOmics, MODIG, EMGNN, and TREE.
+
+For detailed instructions on how to set up the environment, handle data dependencies, and run the reproduction notebooks, please refer to the `README.md` file located inside the `baseline/` directory.
