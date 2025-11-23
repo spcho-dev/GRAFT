@@ -3,12 +3,12 @@ import os
 
 # --- Configuration ---
 # Input files
-ncg_annotation_path = "./node_prediction_pancancer/NCG_cancerdrivers_annotation_supporting_evidence.tsv"
+ncg_annotation_path = "./node_prediction/NCG_cancerdrivers_annotation_supporting_evidence.tsv"
 driver_path = '../Data/796true.txt'
 nondriver_path = '../Data/2187false.txt'
 
 # Output file
-output_dir = "./node_prediction_pancancer"
+output_dir = "./node_prediction"
 output_filename = os.path.join(output_dir, "potential_driver_genes_ncg7.2.txt")
 
 try:

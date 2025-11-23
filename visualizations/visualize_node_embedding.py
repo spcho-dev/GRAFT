@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 import os
 
 # --- Configuration ---
-data_file = "./node_prediction_pancancer/node_embeddings.csv"
+data_file = "./node_prediction/node_embeddings.csv"
 output_dir = "./figures"
 output_filename = os.path.join(output_dir, "umap_visualization.jpg")
 
@@ -21,7 +21,7 @@ except FileNotFoundError:
     exit()
 
 # --- Preprocessing ---
-embedding_cols = [col for col in df.columns if col not in ['true_label', 'pred_prob', 'pred_label', 'fold', 'gene']]
+embedding_cols = [col for col in df.columns if col not in ['true_label', 'pred_prob', 'pred_label', 'gene']]
 embedding_data = StandardScaler().fit_transform(df[embedding_cols].values)
 
 # --- UMAP Dimensionality Reduction ---
