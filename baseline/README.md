@@ -1,7 +1,7 @@
 
 # Baseline Models Reproduction
 
-This directory contains resources to reproduce the performance of the 8 baseline models compared in our study. For each model, we provide pre-trained model weights (checkpoints) and a Jupyter Notebook (`reproduce_test.ipynb`) to facilitate step-by-step inference and performance evaluation.
+This directory contains resources to reproduce the performance of the eight baseline models compared in our study. For each model, we provide pre-trained model weights (checkpoints) and a Jupyter Notebook (`reproduce_test.ipynb`) to facilitate step-by-step inference and performance evaluation.
 
 ## Directory Structure
 
@@ -58,4 +58,22 @@ Below is the list of baseline models included in this comparison, along with the
 | **DISHyper** | Deng, C., et al. (2024). Identifying new cancer genes based on the integration of annotated gene sets via hypergraph neural networks. *Bioinformatics*, 40(Suppl 1). | [Link](https://github.com/genemine/DISHyper) |
 | **DISFusion** | Deng, C., et al. (2025). Improving Cancer Gene Prediction by Enhancing Common Information Between the PPI Network and Gene Functional Association. *AAAI*, 39(1). | [Link](https://github.com/CharlesDeng0814/DISFusion) |
 | **TREE** | Su, X., et al. (2025). Interpretable identification of cancer genes across biological networks via transformer-powered graph representation learning. *Nat Biomed Eng*, 9(3). | [Link](https://github.com/Blair1213/TREE) |
+
+-----
+
+## Notes on Reproduced Performance (Recommended)
+
+The performance reproduced in this repository may not match the exact results reported in the original publications.  
+Since each model is evaluated on pre-defined folds and relies on external dependencies, slight differences from the original average scores can naturally occur.
+
+If you wish to go beyond simple reproduction — for example:
+
+- running the models on entire datasets,  
+- training from scratch,  
+- or applying the models to new or custom data —  
+
+we recommend consulting each model’s **official GitHub repository** linked above.  
+The official repositories include the full training pipelines, complete datasets, and configuration details that may not be included here due to repository size constraints.
+
+This reproduction environment is designed to provide a **lightweight, accessible, and practical** way to explore the core behavior of the baseline models, while the official sources remain the best place for **full-scale experimentation and advanced use cases**.
 
