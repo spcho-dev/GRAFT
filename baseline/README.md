@@ -14,7 +14,7 @@ baseline/
 ├── GATOmics/
 ├── ECD-CDGI/
 ├── MNGCL/
-│   ├── reproduction_utils.py # Model definitions and helper functions
+│   ├── reproduction_utils.py # (Or model.py, utils.py) Model definitions & helpers
 │   ├── reproduce_test.ipynb  # Jupyter notebook for reproduction
 │   └── Data/                     # Learned model weight files and data
 ├── DISHyper/
